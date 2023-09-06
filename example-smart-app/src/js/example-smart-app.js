@@ -47,6 +47,7 @@
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
+          p.address = 'Dummary Address';
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
@@ -78,6 +79,7 @@
       lname: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
+      address: {value: ''},
       height: {value: ''},
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
