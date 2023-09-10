@@ -49,6 +49,9 @@
           p.lname = lname;
           p.address = 'Dummary Address';
           p.address = patient.address[0].text;
+          if (p.address == ''){
+            p.address = patient.address[0].line + ' ' + patient.address[0].city;
+          }
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
