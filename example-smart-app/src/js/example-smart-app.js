@@ -54,6 +54,7 @@
             alert ('address is empty');
             p.address = patient.address[0].line + ' ' + patient.address[0].city;
           }
+          
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
