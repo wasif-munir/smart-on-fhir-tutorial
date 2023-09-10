@@ -48,13 +48,27 @@
           p.fname = fname;
           p.lname = lname;
           p.address = 'Dummary Address';
-          p.address = patient.address[0].text;
-          alert (p.address);
-          if (p.address == ''){
-            alert ('address is empty');
-            p.address = patient.address[0].line + ' ' + patient.address[0].city;
+          if (typeof patient.address[0].text !== 'undefined') {
+            p.address = patient.address[0].text;
           }
-          
+          alert (p.address);
+          if (p.address == 'Dummary Address'){
+            alert ('address is empty');
+            
+            if (typeof patient.address[0].line !== 'undefined') {
+              p.address = patient.address[0].line;
+            }
+            if (typeof patient.address[0].city !== 'undefined') {
+              p.address += ' ' + patient.address[0].city;
+            }
+            if (typeof patient.address[0].state !== 'undefined') {
+              p.address += ' ' + patient.address[0].state;
+            }
+            if (typeof patient.address[0].postalCode !== 'undefined') {
+              p.address += ' ' + patient.address[0].postalCode;
+            }
+          }
+
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
