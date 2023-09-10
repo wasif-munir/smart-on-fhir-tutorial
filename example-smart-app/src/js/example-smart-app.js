@@ -49,7 +49,9 @@
           p.lname = lname;
           p.address = 'Dummary Address';
           p.address = patient.address[0].text;
+          alert (p.address);
           if (p.address == ''){
+            alert ('address is empty');
             p.address = patient.address[0].line + ' ' + patient.address[0].city;
           }
           p.height = getQuantityValueAndUnit(height[0]);
