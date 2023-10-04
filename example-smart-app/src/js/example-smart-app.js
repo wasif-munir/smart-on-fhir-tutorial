@@ -10,7 +10,9 @@
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
+        alert ("patient obj built"); //wasif
         var pt = patient.read();
+        alert ("patient obj read"); //wasif
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
@@ -21,11 +23,13 @@
                       }
                     }
                   });
-
+        
         $.when(pt, obv).fail(onError);
-
+        
         $.when(pt, obv).done(function(patient, obv) {
+          alert ("In Observation Resouce Read"); //wasif
           var byCodes = smart.byCodes(obv, 'code');
+          alert ("byCodes called"); //wasif
           var gender = patient.gender;
 
           var fname = '';
@@ -35,13 +39,13 @@
             fname = patient.name[0].given;
             lname = patient.name[0].family;
           }
-
+          alert ("1"); //wasif
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-
+          alert ("2"); //wasif
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
