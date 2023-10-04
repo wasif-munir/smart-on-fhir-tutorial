@@ -23,9 +23,9 @@
                       }
                     }
                   });
-        
+        alert ("patient.api.fetchAll - complete"); //wasif
         $.when(pt, obv).fail(onError);
-        
+        alert ("pt obv onError - After"); //wasif
         $.when(pt, obv).done(function(patient, obv) {
           alert ("In Observation Resouce Read"); //wasif
           var byCodes = smart.byCodes(obv, 'code');
