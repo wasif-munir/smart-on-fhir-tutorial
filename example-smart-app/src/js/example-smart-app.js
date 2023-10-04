@@ -24,6 +24,7 @@
                     }
                   });
         alert ("patient.api.fetchAll - complete"); //wasif
+        alert (obv); //wasif
         $.when(pt, obv).fail(onError);
         alert ("pt obv onError - After"); //wasif
         $.when(pt, obv).done(function(patient, obv) {
