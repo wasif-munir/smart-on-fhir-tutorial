@@ -13,7 +13,8 @@
         alert ("patient obj built"); //wasif
         var pt = patient.read();
         alert ("patient obj read"); //wasif
-        var obv = smart.patient.api.fetchAll({
+        var obv;
+        /*var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
                       code: {
@@ -23,6 +24,7 @@
                       }
                     }
                   });
+                  */
         alert ("patient.api.fetchAll - complete"); //wasif
         alert (obv); //wasif
         $.when(pt, obv).fail(onError);
