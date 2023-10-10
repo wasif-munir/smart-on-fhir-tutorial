@@ -7,7 +7,7 @@
       ret.reject();
     }
     
-    function onReadyPatOnly(smart)  {
+    function onReadyGetPatResource(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         alert ("patient obj built"); //wasif
@@ -185,7 +185,7 @@
       }
     }
 
-    FHIR.oauth2.ready(onReady, onError);
+    FHIR.oauth2.ready(onReadyGetPatResource, onError);
     return ret.promise();
 
   };
