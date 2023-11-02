@@ -276,8 +276,8 @@
     }
     */
 
-    FHIR.oauth2.ready(onReadyGetPatResource, onError);
-    //FHIR.oauth2.ready(onReady, onError);
+    //FHIR.oauth2.ready(onReadyGetPatResource, onError);
+    FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
 
   };
