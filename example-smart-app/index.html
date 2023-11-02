@@ -91,7 +91,9 @@
       extractData().then(
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
+          alert ("index.html > drawVisualization before"); //wasif
           drawVisualization(p);
+          alert ("index.html > drawVisualization after"); //wasif
         },
 
         //Display 'Failed to call FHIR Service' if extractData failed
