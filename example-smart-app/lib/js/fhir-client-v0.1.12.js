@@ -16921,7 +16921,7 @@ function urlParam(p, forceArray) {
 }
 
 function stripTrailingSlash(str) {
-	alert (str);
+    alert ("fhir-client-v0.1.12.js > stripTrailingSlash > " + str);
     if(str.substr(-1) === '/') {
         return str.substr(0, str.length - 1);
     }
@@ -17518,8 +17518,8 @@ function FhirClient(p) {
     server.auth = server.auth ||  {
       type: 'none'
     };
-	alert(fhirAPI); //wasif
-	alert(client.server.serviceUrl); //wasif
+    
+    alert("fhir-client-v0.1.12.js > " + client.server.serviceUrl); //wasif
     if (!client.server.serviceUrl || !client.server.serviceUrl.match(/https?:\/\/.+[^\/]$/)) {
       throw "Must supply a `server` property whose `serviceUrl` begins with http(s) " + 
         "and does NOT include a trailing slash. E.g. `https://fhir.aws.af.cm/fhir`";
