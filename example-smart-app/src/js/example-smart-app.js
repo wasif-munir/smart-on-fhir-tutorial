@@ -119,9 +119,9 @@
         $.when(pt, obv).fail(onError);
         alert ("example-smart-app.js > L 32"); //wasif
         $.when(pt, obv).done(function(patient, obv) {
-          //alert ("example-smart-app.js > L 34 > obs by codes before"); //wasif
+          alert ("example-smart-app.js > L 122 > obs by codes before"); //wasif
           var byCodes = smart.byCodes(obv, 'code');
-          //alert ("example-smart-app.js > L 36 > obs by byCodes after"); //wasif
+          alert ("example-smart-app.js > L 124 > obs by byCodes after"); //wasif
           var gender = patient.gender;
 
           var fname = '';
@@ -131,13 +131,13 @@
             fname = patient.name[0].given;
             lname = patient.name[0].family;
           }
-          //alert ("example-smart-app.js > L 46 > before obs get"); //wasif
+          alert ("example-smart-app.js > L 134 > before obs get"); //wasif
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-          //alert ("example-smart-app.js > L 52 > after obs get"); //wasif
+          alert ("example-smart-app.js > L 140 > after obs get"); //wasif
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
@@ -147,7 +147,7 @@
           if (typeof patient.address[0].text !== 'undefined') {
             p.address = patient.address[0].text;
           }
-          alert ("example-smart-app.js > L 62 > p.address " + p.address);
+          alert ("example-smart-app.js > L 150 > p.address " + p.address);
           if (p.address == 'Dummary Address'){
             alert ('address is empty');
             
@@ -184,97 +184,6 @@
         onError();
       }
     }
-    
-    /*
-    function onReady(smart)  {
-      if (smart.hasOwnProperty('patient')) {
-        var patient = smart.patient;
-        alert ("patient obj built"); //wasif
-        var pt = patient.read();
-        alert ("patient obj read"); //wasif
-        var obv;
-        var obv = smart.patient.api.fetchAll({
-                    type: 'Observation',
-                    query: {
-                      code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
-                      }
-                    }
-                  });
-                  
-        alert ("patient.api.fetchAll - complete"); //wasif
-        alert (obv); //wasif
-        $.when(pt, obv).fail(onError);
-        alert ("pt obv onError - After"); //wasif
-        $.when(pt, obv).done(function(patient, obv) {
-          alert ("In Observation Resouce Read"); //wasif
-          var byCodes = smart.byCodes(obv, 'code');
-          alert ("byCodes called"); //wasif
-          var gender = patient.gender;
-
-          var fname = '';
-          var lname = '';
-
-          if (typeof patient.name[0] !== 'undefined') {
-            fname = patient.name[0].given;
-            lname = patient.name[0].family;
-          }
-          alert ("1"); //wasif
-          var height = byCodes('8302-2');
-          var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
-          var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
-          var hdl = byCodes('2085-9');
-          var ldl = byCodes('2089-1');
-          alert ("2"); //wasif
-          var p = defaultPatient();
-          p.birthdate = patient.birthDate;
-          p.gender = gender;
-          p.fname = fname;
-          p.lname = lname;
-          p.address = 'Dummary Address';
-          if (typeof patient.address[0].text !== 'undefined') {
-            p.address = patient.address[0].text;
-          }
-          alert (p.address);
-          if (p.address == 'Dummary Address'){
-            alert ('address is empty');
-            
-            if (typeof patient.address[0].line !== 'undefined') {
-              p.address = patient.address[0].line;
-            }
-            if (typeof patient.address[0].city !== 'undefined') {
-              p.address += ' ' + patient.address[0].city;
-            }
-            if (typeof patient.address[0].state !== 'undefined') {
-              p.address += ' ' + patient.address[0].state;
-            }
-            if (typeof patient.address[0].postalCode !== 'undefined') {
-              p.address += ' ' + patient.address[0].postalCode;
-            }
-          }
-
-          p.height = getQuantityValueAndUnit(height[0]);
-
-          if (typeof systolicbp != 'undefined')  {
-            p.systolicbp = systolicbp;
-          }
-
-          if (typeof diastolicbp != 'undefined') {
-            p.diastolicbp = diastolicbp;
-          }
-
-          p.hdl = getQuantityValueAndUnit(hdl[0]);
-          p.ldl = getQuantityValueAndUnit(ldl[0]);
-
-          ret.resolve(p);
-        });
-      } else {
-        onError();
-      }
-    }
-    */
 
     //FHIR.oauth2.ready(onReadyGetPatResource, onError);
     FHIR.oauth2.ready(onReady, onError);
