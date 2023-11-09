@@ -98,6 +98,8 @@
     }
 
     function onReady(smart)  {
+      alert ("example-smart-app.js > onReady(smart) > L 100"); //wasif
+      alert (smart); //wasif
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         alert ("example-smart-app.js > L 13"); //wasif
@@ -181,6 +183,7 @@
           ret.resolve(p);
         });
       } else {
+        alert ("example-smart-app.js > onError() > L 185"); //wasif
         onError();
       }
     }
