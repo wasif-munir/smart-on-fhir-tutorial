@@ -11,23 +11,8 @@
     <title>Example-SMART-App</title>
   </head>
   <body>
-    <!-- Required JS files to enable this page to embed within an MPage -->
-    <!--
-      Temporarily disable cerner-smart-embeddable-lib
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
-      <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
-    -->
-    <button type="button" id="myBtn1" onclick="myFunction('pat-obs')">Patient with Observations</button>
-
-    <button type="button" id="myBtn2" onclick="myFunction('pat-only')">Patient Only</button>
-    <!-- FHIR Client JS Library -->
-    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
-
-    <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
-    <!-- https://github.com/cerner/fhir-client-cerner-additions -->
-    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
-    <script>
-      myFunction(caller)
+      <script>
+          myFunction(caller)
           {
               if (caller = 'pat-only') {
                   FHIR.oauth2.authorize({
@@ -44,7 +29,23 @@
               }
               
           }
-    </script>
+      </script>
+    <!-- Required JS files to enable this page to embed within an MPage -->
+    <!--
+      Temporarily disable cerner-smart-embeddable-lib
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
+      <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
+    -->
+    <button type="button" id="myBtn1" onclick="myFunction('pat-obs')">Patient with Observations</button>
+
+    <button type="button" id="myBtn2" onclick="myFunction('pat-only')">Patient Only</button>
+    <!-- FHIR Client JS Library -->
+    <script src='./lib/js/fhir-client-v0.1.12.js'></script>
+
+    <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
+    <!-- https://github.com/cerner/fhir-client-cerner-additions -->
+    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+
     <div class="spinner">
       <div class="bounce1"></div>
       <div class="bounce2"></div>
