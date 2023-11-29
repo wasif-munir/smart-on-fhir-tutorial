@@ -14,7 +14,7 @@
       <script>
           function myFunction(caller)
           {
-              if (caller = 'pat-only') {
+              if (caller == 'pat-only') {
                   FHIR.oauth2.authorize({
                       'client_id': '15cdaf96-50d9-4169-99b3-f6b46c2f101e',
                       'scope': 'patient/Patient.read patient/Observation.read launch/patient online_access openid profile',
@@ -36,6 +36,8 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
       <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
     -->
+    <p>Click to open app</p>
+    <p></p>
     <button type="button" id="myBtn1" onclick="myFunction('pat-obs')">Patient with Observations</button>
 
     <button type="button" id="myBtn2" onclick="myFunction('pat-only')">Patient Only</button>
