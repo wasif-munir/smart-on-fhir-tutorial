@@ -15583,7 +15583,7 @@ support.ajax = xhrSupported = !!xhrSupported;
 
 jQuery.ajaxTransport(function( options ) {
 	var callback;
-
+	debugger;
 	// Cross domain only allowed if supported through XMLHttpRequest
 	if ( support.cors || xhrSupported && !options.crossDomain ) {
 		return {
