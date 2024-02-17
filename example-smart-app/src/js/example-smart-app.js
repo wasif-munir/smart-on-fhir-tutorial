@@ -118,6 +118,7 @@
                   });
                   
         alert ("example-smart-app.js > L 28"); //wasif
+        if (obv == null) alert ("obv is null");
         $.when(pt, obv).fail(onError);
         alert ("example-smart-app.js > L 32"); //wasif
         $.when(pt, obv).done(function(patient, obv) {
