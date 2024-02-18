@@ -11,25 +11,43 @@
     <title>Example-SMART-App</title>
   </head>
   <body>
+      <script>
+          function myFunction(caller)
+          {
+              if (caller == 'pat-only') {
+                  FHIR.oauth2.authorize({
+                      'client_id': 'aba7ec40-7d7a-4f01-8817-105e82671d10',
+                      'scope': 'patient/Patient.read patient/Observation.read launch/patient online_access openid profile',
+                      'redirect_uri': 'https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/index2.html'
+                  });
+              } else {
+                  FHIR.oauth2.authorize({
+                      'client_id': 'aba7ec40-7d7a-4f01-8817-105e82671d10',
+                      'scope': 'patient/Patient.read patient/Observation.read launch/patient online_access openid profile',
+                      'redirect_uri': 'https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/index.html'
+                  });
+              }
+              
+          }
+      </script>
     <!-- Required JS files to enable this page to embed within an MPage -->
     <!--
       Temporarily disable cerner-smart-embeddable-lib
       <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
       <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
     -->
+    <p>Click to open app</p>
+    <p></p>
+    <button type="button" id="myBtn1" onclick="myFunction('pat-obs')">Redirect 1 > Obs</button>
 
+    <button type="button" id="myBtn2" onclick="myFunction('pat-only')">Redirect 2 > Pat</button>
     <!-- FHIR Client JS Library -->
     <script src='./lib/js/fhir-client-v0.1.12.js'></script>
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
-    <script>
-      FHIR.oauth2.authorize({
-        'client_id': 'aba7ec40-7d7a-4f01-8817-105e82671d10',
-        'scope':  'patient/Patient.read patient/Observation.read launch/patient online_access openid profile'
-      });
-    </script>
+
     <div class="spinner">
       <div class="bounce1"></div>
       <div class="bounce2"></div>
