@@ -1,5 +1,5 @@
 (function(window){
-  window.extractData = function() {
+  window.extractData = function(caller) {
     var ret = $.Deferred();
 
     function onError() {
@@ -8,9 +8,11 @@
     }
     
     function onReadyGetPatResource(smart)  {
+      alert ("example-smart-app.js > onReadyGetPatResource(smart) > L 11"); //wasif
+      
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
-        alert ("example-smart-app.js > L 13"); //wasif
+        //alert ("example-smart-app.js > L 13"); //wasif
         var pt = patient.read();
         //alert ("example-smart-app.js > L 15"); //wasif
         var obv;
@@ -93,13 +95,14 @@
           ret.resolve(p);
         });
       } else {
+        alert ("Patient Context not found");
         onError();
       }
     }
 
     function onReady(smart)  {
       alert ("example-smart-app.js > onReady(smart) > L 100"); //wasif
-      //alert (smart); //wasif
+      
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         //alert ("example-smart-app.js > L 13"); //wasif
@@ -189,8 +192,12 @@
       }
     }
 
-    //FHIR.oauth2.ready(onReadyGetPatResource, onError);
-    FHIR.oauth2.ready(onReady, onError);
+    if (caller == "Pat") {
+      FHIR.oauth2.ready(onReadyGetPatResource, onError);
+    }
+    else {
+      FHIR.oauth2.ready(onReady, onError);
+    }
     return ret.promise();
 
   };
