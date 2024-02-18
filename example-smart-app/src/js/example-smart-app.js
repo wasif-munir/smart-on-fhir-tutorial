@@ -95,7 +95,7 @@
           ret.resolve(p);
         });
       } else {
-        alert ("Patient Context not found");
+        alert ("Patient Context not found"); //wasif
         onError();
       }
     }
@@ -187,7 +187,7 @@
           ret.resolve(p);
         });
       } else {
-        //alert ("example-smart-app.js > onError() > L 185"); //wasif
+        alert ("Patient Context not found"); //wasif
         onError();
       }
     }
