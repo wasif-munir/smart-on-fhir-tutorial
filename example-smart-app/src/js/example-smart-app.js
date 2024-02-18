@@ -12,7 +12,7 @@
         var patient = smart.patient;
         alert ("example-smart-app.js > L 13"); //wasif
         var pt = patient.read();
-        alert ("example-smart-app.js > L 15"); //wasif
+        //alert ("example-smart-app.js > L 15"); //wasif
         var obv;
         /*var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
@@ -26,10 +26,10 @@
                   });
                   */
         
-        alert ("example-smart-app.js > L 28"); //wasif
+        //alert ("example-smart-app.js > L 28"); //wasif
         
         $.when(pt, obv).fail(onError);
-        alert ("example-smart-app.js > L 32"); //wasif
+        //alert ("example-smart-app.js > L 32"); //wasif
         $.when(pt, obv).done(function(patient, obv) {
           //alert ("example-smart-app.js > L 34 > obs by codes before"); //wasif
           //var byCodes = smart.byCodes(obv, 'code');
@@ -59,9 +59,9 @@
           if (typeof patient.address[0].text !== 'undefined') {
             p.address = patient.address[0].text;
           }
-          alert ("example-smart-app.js > L 62 > p.address " + p.address);
+          //alert ("example-smart-app.js > L 62 > p.address " + p.address);
           if (p.address == 'Dummary Address'){
-            alert ('address is empty');
+            //alert ('address is empty');
             
             if (typeof patient.address[0].line !== 'undefined') {
               p.address = patient.address[0].line;
@@ -99,12 +99,12 @@
 
     function onReady(smart)  {
       alert ("example-smart-app.js > onReady(smart) > L 100"); //wasif
-      alert (smart); //wasif
+      //alert (smart); //wasif
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
-        alert ("example-smart-app.js > L 13"); //wasif
+        //alert ("example-smart-app.js > L 13"); //wasif
         var pt = patient.read();
-        alert ("example-smart-app.js > L 15"); //wasif
+        //alert ("example-smart-app.js > L 15"); //wasif
         var obv;
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
@@ -117,14 +117,14 @@
                     }
                   });
                   
-        alert ("example-smart-app.js > L 28"); //wasif
+        //alert ("example-smart-app.js > L 28"); //wasif
         if (obv == null) alert ("obv is null");
         $.when(pt, obv).fail(onError);
-        alert ("example-smart-app.js > L 32"); //wasif
+        //alert ("example-smart-app.js > L 32"); //wasif
         $.when(pt, obv).done(function(patient, obv) {
-          alert ("example-smart-app.js > L 122 > obs by codes before"); //wasif
+          //alert ("example-smart-app.js > L 122 > obs by codes before"); //wasif
           var byCodes = smart.byCodes(obv, 'code');
-          alert ("example-smart-app.js > L 124 > obs by byCodes after"); //wasif
+          //alert ("example-smart-app.js > L 124 > obs by byCodes after"); //wasif
           var gender = patient.gender;
 
           var fname = '';
@@ -134,13 +134,13 @@
             fname = patient.name[0].given;
             lname = patient.name[0].family;
           }
-          alert ("example-smart-app.js > L 134 > before obs get"); //wasif
+          //alert ("example-smart-app.js > L 134 > before obs get"); //wasif
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-          alert ("example-smart-app.js > L 140 > after obs get"); //wasif
+          //alert ("example-smart-app.js > L 140 > after obs get"); //wasif
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
@@ -150,9 +150,9 @@
           if (typeof patient.address[0].text !== 'undefined') {
             p.address = patient.address[0].text;
           }
-          alert ("example-smart-app.js > L 150 > p.address " + p.address);
+          //alert ("example-smart-app.js > L 150 > p.address " + p.address);
           if (p.address == 'Dummary Address'){
-            alert ('address is empty');
+            //alert ('address is empty');
             
             if (typeof patient.address[0].line !== 'undefined') {
               p.address = patient.address[0].line;
@@ -184,7 +184,7 @@
           ret.resolve(p);
         });
       } else {
-        alert ("example-smart-app.js > onError() > L 185"); //wasif
+        //alert ("example-smart-app.js > onError() > L 185"); //wasif
         onError();
       }
     }
