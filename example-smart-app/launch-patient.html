@@ -20,14 +20,19 @@
                       'scope': 'patient/Patient.read patient/Observation.read launch/patient online_access openid profile',
                       'redirect_uri': 'https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/index2.html'
                   });
-              } else {
+              } else if (caller == 'all'){
                   FHIR.oauth2.authorize({
+                      'client_id': 'e93ef0c6-10ee-4bbb-8ced-75a37523d8a6',
+                      'scope': 'patient/Patient.read patient/Observation.read launch/patient online_access openid profile',
+                      'redirect_uri': 'https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/index.html'
+                  });
+              } else {
+                FHIR.oauth2.authorize({
                       'client_id': '15cdaf96-50d9-4169-99b3-f6b46c2f101e',
                       'scope': 'patient/Patient.read patient/Observation.read launch/patient online_access openid profile',
                       'redirect_uri': 'https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/index.html'
                   });
               }
-              
           }
       </script>
     <!-- Required JS files to enable this page to embed within an MPage -->
@@ -41,6 +46,8 @@
     <button type="button" id="myBtn1" onclick="myFunction('pat-obs')">Redirect 1 > Obs</button>
 
     <button type="button" id="myBtn2" onclick="myFunction('pat-only')">Redirect 2 > Pat</button>
+
+    <button type="button" id="myBtn2" onclick="myFunction('all')">Redirect 3 > All</button>
     <!-- FHIR Client JS Library -->
     <script src='./lib/js/fhir-client-v0.1.12.js'></script>
 
