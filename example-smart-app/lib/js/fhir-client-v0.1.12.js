@@ -17419,8 +17419,10 @@ BBClient.authorize = function(params, errback){
       "scope="+encodeURIComponent(client.scope)+"&"+
       "redirect_uri="+encodeURIComponent(client.redirect_uri)+"&"+
       "state="+encodeURIComponent(state)+"&"+
-      "aud="+encodeURIComponent(params.server);
-    
+      "code_challenge="+encodeURIComponent('NBSSe6w_ABTFmOl0dBC_1dmuYtRJpARHcJAVithSOsA')+"&"+
+      "code_challenge_method="+encodeURIComponent('S256')+"&"+
+      "aud="+encodeURIComponent(params.server);    
+	  
     if (typeof client.launch !== 'undefined' && client.launch) {
        redirect_to += "&launch="+encodeURIComponent(client.launch);
     }
