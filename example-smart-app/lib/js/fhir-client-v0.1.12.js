@@ -17418,14 +17418,14 @@ BBClient.authorize = function(params, errback){
       "response_type="+encodeURIComponent(params.response_type)+"&"+
       "scope="+encodeURIComponent(client.scope)+"&"+
       "redirect_uri="+encodeURIComponent(client.redirect_uri)+"&"+
-      "state="+encodeURIComponent(state)+"&"+
-      "code_challenge="+encodeURIComponent('NBSSe6w_ABTFmOl0dBC_1dmuYtRJpARHcJAVithSOsA')+"&"+
-      "code_challenge_method="+encodeURIComponent('S256')+"&"+
+      "state="+encodeURIComponent(state)+"&"+      
       "aud="+encodeURIComponent(params.server);    
 	  
     if (typeof client.launch !== 'undefined' && client.launch) {
        redirect_to += "&launch="+encodeURIComponent(client.launch);
     }
+	redirect_to += "&code_challenge="+encodeURIComponent('NBSSe6w_ABTFmOl0dBC_1dmuYtRJpARHcJAVithSOsA')+"&"+
+      		"code_challenge_method="+encodeURIComponent('S256');
 
     window.location.href = redirect_to;
   }, errback);
