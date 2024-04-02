@@ -1,0 +1,180 @@
+SMART on FHIR Redirect URL:
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+MedcareMSO
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+https://testing-fhirapi.medcaremso.com/api
+https://testing-fhirauth.medcaremso.com/connect/authorize
+https://testing-fhirauth.medcaremso.com/connect/token
+
+Client ID: InfernoPHRClient
+Client Secret: SuperSecretPassword
+
+Identiy 4 Server User
+alice
+Pass123$
+
+Id		Name			Gender	Date of Birth	
+264283	Vasquez, Frank	Male	9/1/2023
+
+Identity DB
+10.170.192.55
+Identity_User
+
+10.170.192.52
+care_maximus_user
+
+\\10.170.192.80\FhirAuthLog
+mclfhiradmin@ad.mcldev.co/pniT914h^0#hau
+
+
+https://testing-healus.medcaremso.com
+hafzaal@medcaremso.com
+Medcare@1234
+Switch Labc INC
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+NextGen
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient_nextgen.html?iss=https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4
+
+Username: patientapitest
+Password: Password1!
+
+Client Id:	74361b01-3014-4710-9359-bb634e08b512
+Client Secret:	9731775c-c0bd-440f-9308-3937a1e23911
+
+patient/Patient.read patient/Observation.read launch/patient online_access openid profile
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/
+
+auth : https://fhir.nextgen.com/nge/prod/patient-oauth/authorize/login?sessionId=112b7435-98c1-4b0c-b239-fea25653f220&sessionData=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiIxMTJiNzQzNS05OGMxLTRiMGMtYjIzOS1mZWEyNTY1M2YyMjAiLCJyZWRpcmVjdF91cmkiOiJodHRwczovL3dhc2lmLW11bmlyLmdpdGh1Yi5pby9zbWFydC1vbi1maGlyLXR1dG9yaWFsL2V4YW1wbGUtc21hcnQtYXBwLyIsInJlc3BvbnNlX3R5cGUiOiJjb2RlIiwicmVzcG9uc2VfbW9kZSI6InF1ZXJ5Iiwic2NvcGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidXNlci9QYXRpZW50LnJlYWQiLCJwYXRpZW50L1BhdGllbnQucmVhZCIsImxhdW5jaC9lbmNvdW50ZXIiLCJmaGlyVXNlciIsInBhdGllbnQvT2JzZXJ2YXRpb24ucmVhZCIsInVzZXIvT2JzZXJ2YXRpb24ucmVhZCIsIm9ubGluZV9hY2Nlc3MiLCJvcGVuaWQiLCJsYXVuY2gvcGF0aWVudCJdLCJzdGF0ZSI6ImY2ZGVmY2U4LTdjMmMtN2U3Yy05YjI2LTEwNGQwNWEyMjY4NiIsImNsaWVudF9pZCI6Ijc0MzYxYjAxLTMwMTQtNDcxMC05MzU5LWJiNjM0ZTA4YjUxMiIsImF1ZGllbmNlIjoiaHR0cHM6Ly9maGlyLm5leHRnZW4uY29tL25nZS9wcm9kL2ZoaXItYXBpLXI0L2ZoaXIvcjQiLCJleHAiOjE3MDEzMjc1MzgsImNsaWVudF9uYW1lIjoiTWVkY2FyZU1TTyAoRUhSL1BNIFZlbmRvcikiLCJhcHBfbmFtZSI6Ik15IFNtYXJ0IFBhdGllbnQgQXBwIn0.e6Nr4X8ijaLxwbJHK1d2Ju1gb-bmC7Zc1-PBXfUGPVU
+Looks Prod Environement
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Cerner
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient.html?iss=https://fhir-myrecord.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient_cerner_confidential.html?iss=https://fhir-myrecord.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d
+
+Username: timApeters
+Password: Cerner01
+
+https://cernerhealth.com/oauth/authenticate?redirect_uri=https%3A%2F%2Fcernerhealth.com%2Fsaml%2Fsso%2Fresponse%3Fmessage_id%3D_acb87c79-4311-46e1-979c-75fef8d62317%26issuer%3Dhttps%253A%252F%252Fauthorization.cerner.com%252Fsession-api%252Fprotocol%252Fsaml2%252Fmetadata&sign_in_only=on&client_id=3939a5fbc6c84f7594130b9740aede1e
+Non-Prod Environement
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+EPIC (Patient API 200 Successful, Observation API 403 error)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient_epic.html?iss=https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient_epic.html?iss=https://haiku-canto-prod.chmca.org/ARR-FHIR-PRD/api/FHIR/DSTU2/
+
+fhircamila
+epicepic1
+
+https://fhir.epic.com/mychart-fhir/Authentication/Login?postloginurl=inside%2Easp%3Fmode%3Doauthlogin%26liteMode%3Dtrue&liteMode=true
+
+
+Offline Access
+GMRr3312rtca4Yz+YB18D+YmETlppBnfhckoFH5RBSRakK1CVkIU5X59mOVC6aLVmj/XTRD7X5B10D3+HFMY8g==
+BBDA90925604AB2999A969F27366AF30B6C4486B
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch_epic.html?iss=https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4
+
+These test users can be used to authenticate when testing Provider-Facing Standalone OAuth 2.0 workflows with the FHIR sandbox.
+
+FHIR		EpicFhir11!		User account without linked provider record. This user will not have a PractitionerRole resource.
+
+FHIRTWO		EpicFhir11!		User account with linked provider record. This user will have a PractitionerRole resource.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+eClinicalWorks (Trouble shooting - in progress)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+My Smart Patient App
+
+ClientID
+mqXXSteCTQzrp12EqcVPUFr4LGoNZY13cgANmyPVxwQ
+
+Sandbox Base URL: https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient_ecw.html?iss=https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch-patient_ecw.html?response_type=code&client_id=mqXXSteCTQzrp12EqcVPUFr4LGoNZY13cgANmyPVxwQ&redirect_uri=https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/redirect&scope=openid+fhirUser+offline_access+user%2FEncounter.read+user%2FPatient.read&state=270579bc-853c-4ed8-a7f4-c8957519b222&aud=https://fhir4.eclinicalworks.com/fhir/r4/JAFJCD&code_challenge=NBSSe6w_ABTFmOl0dBC_1dmuYtRJpARHcJAVithSOsA&code_challenge_method=S256
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch_ecw.html
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+athenahealth (for athenaPractice and athenaWorkflow) (Patient or Provider Credentials not working)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+My Smart Provider App
+ClientID
+eyJhbGciOiJSUzI1NiJ9.eyJjbGllbnRfdXJpIjoiaHR0cHM6XC9cL3dhc2lmLW11bmlyLmdpdGh1Yi5pbyIsImdyYW50X3R5cGVzIjpbImF1dGhvcml6YXRpb25fY29kZSJdLCJpc3MiOiJodHRwczpcL1wvbXlkYXRhLmdlaGVhbHRoY2FyZS5jb20iLCJyZWRpcmVjdF91cmlzIjpbImh0dHBzOlwvXC93YXNpZi1tdW5pci5naXRodWIuaW9cL3NtYXJ0LW9uLWZoaXItdHV0b3JpYWxcL2V4YW1wbGUtc21hcnQtYXBwXC8iXSwidG9rZW5fZW5kcG9pbnRfYXV0aF9tZXRob2QiOiJjbGllbnRfc2VjcmV0X2Jhc2ljIiwic29mdHdhcmVfaWQiOiIwLjEiLCJuYXRpdmVfY2xpZW50IjpmYWxzZSwiaHR0cHM6XC9cL215ZGF0YS5nZWhlYWx0aGNhcmUuY29tXC9vYXV0aDIuY2xhaW1zXC9hcHBfaWQiOiI2NDhlMGJhZi0wNWQ2LTRkZTEtOTk0Mi1hYTA2ZTFjMjg0ZDciLCJleHAiOjIwMTI1NjU1MDYsImNsaWVudF9uYW1lIjoiTXkgU21hcnQgUHJvdmlkZXIgQVBQIiwiaWF0IjoxNjk2OTQ2MzA2LCJjb250YWN0cyI6WyJyZWRoYXQzNjNAZ21haWwuY29tIl0sInJlc3BvbnNlX3R5cGVzIjpbImNvZGUiXX0.ytTIZH19nbQTF68nu3GVdWThvdm_asbi8G6SY5gxZu5NPAhhCBSeXiMdWjWj_Hh_CTtuSfaaLm23wG3WbyhXUf96HMt1_XvZi5i8IJ4XAR2KbE2gDl1CE7s5vwfGxA4thDG4exP0RZTNsj7PsBUgLSpOLzrrJOKanfX-xzR-TWw
+
+Client Secret
+eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbXlkYXRhLmdlaGVhbHRoY2FyZS5jb20iLCJleHAiOjIwMTI1NjU1MDYsImlhdCI6MTY5Njk0NjMwNiwiaHR0cHM6XC9cL215ZGF0YS5nZWhlYWx0aGNhcmUuY29tXC9vYXV0aDIuY2xhaW1zXC9hcHBfaWQiOiI2NDhlMGJhZi0wNWQ2LTRkZTEtOTk0Mi1hYTA2ZTFjMjg0ZDcifQ.PN_VAGpC1z1u-AhvwOLQDN7zJeeYmU9gDgG8_NgYGarKEiVBZVCcmGn5loBAPFA_MLsP3eqympnsEHCSVnzGr7uL171E1jM0JL9UttlFdAqW04ZUW2M8FfTCYK0OtaT-Gluh6ludrq30MAcjkusAYNTBmq16WOTFZDLcNG2QFBY
+
+https://ap22sandbox.fhirapi.athenahealth.com/demoAPIServer/oauth2/authorize?state=defaultState&scope=openid%20profile%20patient/*.read%20launch/patient&response_type=code&redirect_uri=https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/&aud=https%3A%2F%2Fap22sandbox.fhirapi.athenahealth.com%2FdemoAPIServer&client_id=eyJhbGciOiJSUzI1NiJ9.eyJjbGllbnRfdXJpIjoiaHR0cHM6XC9cL3dhc2lmLW11bmlyLmdpdGh1Yi5pbyIsImdyYW50X3R5cGVzIjpbImF1dGhvcml6YXRpb25fY29kZSJdLCJpc3MiOiJodHRwczpcL1wvbXlkYXRhLmdlaGVhbHRoY2FyZS5jb20iLCJyZWRpcmVjdF91cmlzIjpbImh0dHBzOlwvXC93YXNpZi1tdW5pci5naXRodWIuaW9cL3NtYXJ0LW9uLWZoaXItdHV0b3JpYWxcL2V4YW1wbGUtc21hcnQtYXBwXC8iXSwidG9rZW5fZW5kcG9pbnRfYXV0aF9tZXRob2QiOiJjbGllbnRfc2VjcmV0X2Jhc2ljIiwic29mdHdhcmVfaWQiOiIwLjEiLCJuYXRpdmVfY2xpZW50IjpmYWxzZSwiaHR0cHM6XC9cL215ZGF0YS5nZWhlYWx0aGNhcmUuY29tXC9vYXV0aDIuY2xhaW1zXC9hcHBfaWQiOiI2NDhlMGJhZi0wNWQ2LTRkZTEtOTk0Mi1hYTA2ZTFjMjg0ZDciLCJleHAiOjIwMTI1NjU1MDYsImNsaWVudF9uYW1lIjoiTXkgU21hcnQgUHJvdmlkZXIgQVBQIiwiaWF0IjoxNjk2OTQ2MzA2LCJjb250YWN0cyI6WyJyZWRoYXQzNjNAZ21haWwuY29tIl0sInJlc3BvbnNlX3R5cGVzIjpbImNvZGUiXX0.ytTIZH19nbQTF68nu3GVdWThvdm_asbi8G6SY5gxZu5NPAhhCBSeXiMdWjWj_Hh_CTtuSfaaLm23wG3WbyhXUf96HMt1_XvZi5i8IJ4XAR2KbE2gDl1CE7s5vwfGxA4thDG4exP0RZTNsj7PsBUgLSpOLzrrJOKanfX-xzR-TWw
+
+If you are using sandbox for testing, you can use our sample provider login credentials:
+
+User Name: hwinston@sboxprovtenant.com
+Password: TestProvider!@
+
+My Smart Patient App
+ClientID
+eyJhbGciOiJSUzI1NiJ9.eyJjbGllbnRfdXJpIjoiaHR0cHM6XC9cL3dhc2lmLW11bmlyLmdpdGh1Yi5pbyIsImdyYW50X3R5cGVzIjpbImF1dGhvcml6YXRpb25fY29kZSJdLCJpc3MiOiJodHRwczpcL1wvbXlkYXRhLmdlaGVhbHRoY2FyZS5jb20iLCJyZWRpcmVjdF91cmlzIjpbImh0dHBzOlwvXC93YXNpZi1tdW5pci5naXRodWIuaW9cL3NtYXJ0LW9uLWZoaXItdHV0b3JpYWxcL2V4YW1wbGUtc21hcnQtYXBwXC8iXSwidG9rZW5fZW5kcG9pbnRfYXV0aF9tZXRob2QiOiJjbGllbnRfc2VjcmV0X2Jhc2ljIiwic29mdHdhcmVfaWQiOiIwLjEiLCJuYXRpdmVfY2xpZW50IjpmYWxzZSwiaHR0cHM6XC9cL215ZGF0YS5nZWhlYWx0aGNhcmUuY29tXC9vYXV0aDIuY2xhaW1zXC9hcHBfaWQiOiJkZDlhZmZkNy02MGFjLTRmNzktYjQ1OC1iZGFhZmZhOTAwNDAiLCJleHAiOjIwMTI1Njc2MDcsImNsaWVudF9uYW1lIjoiTXkgU21hcnQgUGF0aWVudCBBcHAiLCJpYXQiOjE2OTY5NDg0MDcsImNvbnRhY3RzIjpbInJlZGhhdDM2M0BnbWFpbC5jb20iXSwicmVzcG9uc2VfdHlwZXMiOlsiY29kZSJdfQ.LX2mLeh7MwgIkHZ7_qQnY01ZLXxgrGuiSU2fp_CBzUxcrVIyy4Vh-1reiaQ7SUMz83LBYcr202wWOKt2loWhx0xNgURliC1vIHwuEPo7_BGXzxQIk7djzOkl25DDrXZ3Kzyp7D3-KstnLsMO5TeMaBVGQiIB0byMFZ6Va3pQZg8
+
+Client Secret
+eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbXlkYXRhLmdlaGVhbHRoY2FyZS5jb20iLCJleHAiOjIwMTI1Njc2MDcsImlhdCI6MTY5Njk0ODQwNywiaHR0cHM6XC9cL215ZGF0YS5nZWhlYWx0aGNhcmUuY29tXC9vYXV0aDIuY2xhaW1zXC9hcHBfaWQiOiJkZDlhZmZkNy02MGFjLTRmNzktYjQ1OC1iZGFhZmZhOTAwNDAifQ.uB_9hpmDLG4N3eoDyS7XkZD85W6N99pOfG4X4RShCV6UI5syieR8YVpmRHtWkm5Ywg-iWqccDRwp3b7JecaPI1ekAZ5sAdUQbZCcRhwQRCQa-kn-pQn0n27N7prnCURUwK9BvIH0se0ADeGMRfj0D3Zx2Sxe5yc9FgQ7XRdMHKY
+
+https://ap22sandbox.fhirapi.athenahealth.com/demoAPIServer/oauth2/authorize?state=defaultState&scope=openid%20profile%20patient/*.read%20launch/patient&response_type=code&redirect_uri=https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/&aud=https%3A%2F%2Fap22sandbox.fhirapi.athenahealth.com%2FdemoAPIServer&client_id=eyJhbGciOiJSUzI1NiJ9.eyJjbGllbnRfdXJpIjoiaHR0cHM6XC9cL3dhc2lmLW11bmlyLmdpdGh1Yi5pbyIsImdyYW50X3R5cGVzIjpbImF1dGhvcml6YXRpb25fY29kZSJdLCJpc3MiOiJodHRwczpcL1wvbXlkYXRhLmdlaGVhbHRoY2FyZS5jb20iLCJyZWRpcmVjdF91cmlzIjpbImh0dHBzOlwvXC93YXNpZi1tdW5pci5naXRodWIuaW9cL3NtYXJ0LW9uLWZoaXItdHV0b3JpYWxcL2V4YW1wbGUtc21hcnQtYXBwXC8iXSwidG9rZW5fZW5kcG9pbnRfYXV0aF9tZXRob2QiOiJjbGllbnRfc2VjcmV0X2Jhc2ljIiwic29mdHdhcmVfaWQiOiIwLjEiLCJuYXRpdmVfY2xpZW50IjpmYWxzZSwiaHR0cHM6XC9cL215ZGF0YS5nZWhlYWx0aGNhcmUuY29tXC9vYXV0aDIuY2xhaW1zXC9hcHBfaWQiOiJkZDlhZmZkNy02MGFjLTRmNzktYjQ1OC1iZGFhZmZhOTAwNDAiLCJleHAiOjIwMTI1Njc2MDcsImNsaWVudF9uYW1lIjoiTXkgU21hcnQgUGF0aWVudCBBcHAiLCJpYXQiOjE2OTY5NDg0MDcsImNvbnRhY3RzIjpbInJlZGhhdDM2M0BnbWFpbC5jb20iXSwicmVzcG9uc2VfdHlwZXMiOlsiY29kZSJdfQ.LX2mLeh7MwgIkHZ7_qQnY01ZLXxgrGuiSU2fp_CBzUxcrVIyy4Vh-1reiaQ7SUMz83LBYcr202wWOKt2loWhx0xNgURliC1vIHwuEPo7_BGXzxQIk7djzOkl25DDrXZ3Kzyp7D3-KstnLsMO5TeMaBVGQiIB0byMFZ6Va3pQZg8
+
+If you are using sandbox for testing, you can use our sample patient login credentials:
+
+User Name: athenainterop@aol.com
+Password: TestPatient!@
+
+User Name: Walter.caldwell@outlook.com
+Password: TestPatient!@!
+
+Patient Personal Account
+User: wasif.sef@gmail.com
+Pass: AthenaHealthOnFHIR
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+athenahealth
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+My Smart Patient App
+
+Preview ClientID
+0oalgijtau8w6kya9297
+
+Production ClientID
+0oamadfhaia9kzU4C297
+
+https://api.preview.platform.athenahealth.com/fhir/r4
+
+
+https://wasif-munir.github.io/smart-on-fhir-tutorial/example-smart-app/launch_athena.html
+Preview ClientID
+0oamadg3c8w4UCr1o297
+
+My Smart Provider App Confidentail  
+Preview ClientID
+0oamafcc58d4rPpEr297
+
+Secret: 
+iIIV_ldPn99TkTGutp9ffi8fWTAJ2gayhwxtx48VctDD7qg8-Wt9H8v08NlqJj1Y
