@@ -17424,8 +17424,7 @@ BBClient.authorize = function(params, errback){
     if (typeof client.launch !== 'undefined' && client.launch) {
        redirect_to += "&launch="+encodeURIComponent(client.launch);
     }
-	redirect_to += "&code_challenge="+encodeURIComponent('NBSSe6w_ABTFmOl0dBC_1dmuYtRJpARHcJAVithSOsA')+"&"+
-      		"code_challenge_method="+encodeURIComponent('S256');
+	//redirect_to += "&code_challenge=" + encodeURIComponent('NBSSe6w_ABTFmOl0dBC_1dmuYtRJpARHcJAVithSOsA') +"&"+ "code_challenge_method=" + encodeURIComponent('S256');
 
     window.location.href = redirect_to;
   }, errback);
